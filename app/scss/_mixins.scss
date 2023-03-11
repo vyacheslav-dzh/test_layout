@@ -1,0 +1,23 @@
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: url("#{$file}");
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+@mixin btn($bg_color, $color, $bg_color__active, $color__active) {
+    text-align: center;
+    border-radius: 5px;
+    cursor: url('../img/Cursor\ -\ Hand.png'), pointer;
+    background-color: $bg_color;
+    color: $color;
+    transition: color background-color .3s ease;
+
+    &:hover {
+        background-color: $bg_color__active;
+        color: $color__active;
+    }
+}

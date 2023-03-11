@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Work Sans";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.header .nav {
+  background-color: #fff;
+  padding: 24px 0;
+}
+.header .nav .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+.header .nav__menu {
+  display: flex;
+}
+.header .nav__menu :not(:last-child) {
+  margin-right: 32px;
+}
+.header .nav__menu__item {
+  color: #142B35;
+  line-height: 19px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header .nav__contact {
+  color: #142B35;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #E0E0E0;
+  padding-left: 24px;
+}
+.header .nav__contact__number {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 24px;
+}
+.header .nav__contact__number__icon {
+  position: relative;
+  top: 3px;
+}
+.header .nav .btn {
+  text-align: center;
+  border-radius: 5px;
+  cursor: url("../img/Cursor - Hand.png"), pointer;
+  background-color: #3A98B2;
+  color: #fff;
+  transition: color background-color 0.3s ease;
+  padding: 16px 20px;
+}
+.header .nav .btn:hover {
+  background-color: #328BA4;
+  color: #fff;
+}
+.header .hero {
+  display: block;
+  background-image: url("../img/header_img__full.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header .hero__shadow {
+  background-color: rgba(55, 46, 46, 0.4);
+  padding-top: 350px;
+  padding-bottom: 120px;
+}
+.header .hero__text {
+  max-width: 55%;
+  color: #fff;
+}
+.header .hero__text__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 47px;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  border-left: 2px solid #F2B91D;
+  padding-left: 32px;
+  position: relative;
+  left: -32px;
+}
+.header .hero__text__description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  max-width: 75%;
+}

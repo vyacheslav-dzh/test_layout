@@ -1,0 +1,109 @@
+// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+@import 'mixins';
+
+@include font-face("Work Sans", "../fonts/WorkSans-Regular.ttf");
+@include font-face("Work Sans", "../fonts/WorkSans-Medium.ttf", 500);
+@include font-face("Work Sans", "../fonts/WorkSans-SemiBold.ttf", 600);
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Work Sans";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.header {
+    .nav {
+        background-color: #fff;
+        padding: 24px 0;
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+        }
+
+        &__menu {
+            display: flex;
+            :not(:last-child) {
+                margin-right: 32px;
+            }
+
+            &__item {
+                color: #142B35;
+                line-height: 19px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        &__contact {
+            color: #142B35;
+            display: flex;
+            align-items: center;
+            border-left: 1px solid #E0E0E0;
+            padding-left: 24px;
+            &__number{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                margin-right: 24px;
+                &__icon {
+                    position: relative;
+                    top: 3px;
+                }
+            }
+        }
+        .btn {
+            @include btn(#3A98B2, #fff, #328BA4, #fff);
+            padding: 16px 20px;
+        }
+    }
+    .hero {
+        display: block;
+        background-image: url('../img/header_img__full.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        &__shadow {
+            background-color: rgba(55, 46, 46, 0.4);
+            padding-top: 350px;
+            padding-bottom: 120px;
+        }
+        &__text {
+            max-width: 55%;
+            color: #fff;
+            &__title {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 47px;
+                margin-bottom: 16px;
+                text-transform: capitalize;
+                border-left: 2px solid #F2B91D;
+                padding-left: 32px;
+                position: relative;
+                left: -32px;
+            }
+            &__description {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 27px;
+                max-width: 75%;
+            }
+        }
+    }
+}
